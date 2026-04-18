@@ -59,6 +59,7 @@ h1{
 #input.show{
     display:block;
 }
+
 li{
     position:relative;
     color:#ffffff;
@@ -71,7 +72,9 @@ li{
     transition:all 0.3s;
     display:flex;
 }
-
+li:hover{
+    background-color: #595959;
+}
 li.completed{
     transition:all 0.3s;
     opacity:0.5;
@@ -105,7 +108,7 @@ li.completed .clickbox::after{
     width: 30px;
     height: 30px;
     border-radius: 6px;
-    background-color: rgba(2, 2, 2, 0.54);
+    background-color: rgba(80, 80, 80, 0.54);
     color: #ffffff;
     border: none;
     cursor: pointer;
@@ -114,5 +117,8 @@ li.completed .clickbox::after{
     align-items: center;
     font-size: 20px;
     transition: all 0.3s;
+}
+.delete_button:hover{
+    background-color: rgb(0, 0, 0);
 }
 
