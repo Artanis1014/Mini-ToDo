@@ -39,14 +39,7 @@ function add_task(){
             list.appendChild(task);
         }
     })
-    list.appendChild(task);
-    const task_num = list.querySelectorAll("li");
-    if(task_num.length > 10){
-        const completed_tasks = list.querySelectorAll("li.completed");
-        if(completed_tasks.length > 0){
-            completed_tasks[0].remove();
-        }
-    }
+    list.prepend(task);
     input.value = "";
     input.classList.remove("show");
 }
