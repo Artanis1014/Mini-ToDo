@@ -1,9 +1,12 @@
+/* 全局样式重置，消除默认margin和padding，使用border-box盒模型 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: arial, "黑体";
 }
+
+/* 页面body样式，设置背景色为白色，居中显示，最小高度100vh */
 body {
     background-color: #ffffff;
     display: flex;
@@ -11,6 +14,8 @@ body {
     min-height: 100vh;
     padding: 20px;
 }
+
+/* 主容器样式，深色背景，圆角，固定宽度 */
 .container{
     position:relative;
     width:70vh;
@@ -18,12 +23,16 @@ body {
     border-radius:6px;
     padding:20px;
 }
+
+/* 标题样式，居中显示，白色字体 */
 h1{
     text-align:center;
     color:#ffffff;
     font-size:30px;
     margin-bottom:20px;
 }
+
+/* 添加任务按钮样式，圆形，黄色背景，固定在右下角 */
 #button{
     position:absolute;
     bottom:20px;
@@ -38,10 +47,14 @@ h1{
     font-size:40px;
     transition: 0.3s;
 }
+
+/* 添加任务按钮悬停样式 */
 #button:hover{
     background-color: #6c5702;
     color: #919191;
 }
+
+/* 输入框样式，初始隐藏，绝对定位在底部 */
 #input{
     position:absolute;
     bottom:20px;
@@ -53,13 +66,18 @@ h1{
     border:none;
     display:none;
 }
+
+/* 输入框placeholder样式 */
 #input::placeholder {
     color: #fffdfd;
 }
+
+/* 输入框显示状态样式 */
 #input.show{
     display:block;
 }
 
+/* 任务列表项样式，灰色背景，圆角，带过渡动画 */
 li{
     position:relative;
     color:#ffffff;
@@ -72,14 +90,20 @@ li{
     transition:all 0.3s;
     display:flex;
 }
+
+/* 任务列表项悬停样式 */
 li:hover{
     background-color: #595959;
 }
+
+/* 已完成任务样式，半透明并添加删除线 */
 li.completed{
     transition:all 0.3s;
     opacity:0.5;
     text-decoration: line-through;
 }
+
+/* 任务点击框样式，用于标记完成状态 */
 li .clickbox{
     width:30px;
     height:30px;
@@ -91,10 +115,14 @@ li .clickbox{
     cursor: pointer;
     transition: 0.3s;
 }
+
+/* 已完成任务点击框样式 */
 li.completed .clickbox{
     background-color: #3e3e3d;
     border-color: #3e3e3d;
 }
+
+/* 已完成任务点击框内的勾选标记样式 */
 li.completed .clickbox::after{
     content:"√";
     color:#fff;
@@ -102,6 +130,8 @@ li.completed .clickbox::after{
     font-weight:bold;
     background-color:#3e3e3d;
 }
+
+/* 删除按钮样式，绝对定位在右侧 */
 .delete_button{
     position: absolute;
     right: 10px;
@@ -118,7 +148,8 @@ li.completed .clickbox::after{
     font-size: 20px;
     transition: all 0.3s;
 }
+
+/* 删除按钮悬停样式 */
 .delete_button:hover{
     background-color: rgb(0, 0, 0);
 }
-

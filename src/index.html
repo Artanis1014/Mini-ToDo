@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Mini-ToDO</title>
+    <!-- 引入外部CSS样式文件 -->
     <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
+    <!-- 主容器，用于包裹整个待办事项应用 -->
     <div class = "container">
+        <!-- 应用标题 -->
         <h1>待办</h1>
+        <!-- 添加任务按钮，点击后显示输入框 -->
         <button id = "button">+</button>
+        <!-- 任务列表容器，用于显示所有待办事项 -->
         <ul id = "list"></ul>
+        <!-- 任务输入框，用户在此输入新的待办事项 -->
         <input type = "text" id = "input" placeholder = "输入待办事项">
     </div>
+    <!-- 引入JavaScript脚本文件 -->
     <script src = "main.js"></script>
 </body>
 </html>
